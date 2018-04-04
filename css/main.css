@@ -135,9 +135,12 @@ a.btn:hover {
   transition: all 0.2s;
 }
 
-#color-azul {
-  background: blue;
-  border: blue;
+#rutas {
+  background: #a200ff;
+  border: #e100ff;
+  width: 78%;
+  margin-top: 2vh;
+  text-align: center;
 }
 
 .flex-form input[type="submit"]:hover {
