@@ -135,6 +135,11 @@ a.btn:hover {
   transition: all 0.2s;
 }
 
+#color-azul {
+  background: blue;
+  border: blue;
+}
+
 .flex-form input[type="submit"]:hover {
   background: #d73851;
   border: 1px solid #d73851;
