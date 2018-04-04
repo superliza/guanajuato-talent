@@ -136,8 +136,8 @@ a.btn:hover {
 }
 
 #color-azul {
-  background: blue;
-  border: blue;
+  background: #a200ff;
+  border: #e100ff;
 }
 
 .flex-form input[type="submit"]:hover {
