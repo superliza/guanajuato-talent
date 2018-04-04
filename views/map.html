@@ -1,34 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Place Autocomplete</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/main.css">
-    
-  </head>
-  <body>
-    <input id="pac-input" class="controls" type="text"
-        placeholder="Enter a location">
-    <div id="type-selector" class="controls">
-      <input type="radio" name="type" id="changetype-all" checked="checked">
-      <label for="changetype-all">All</label>
+<html lang="en">
 
-      <input type="radio" name="type" id="changetype-establishment">
-      <label for="changetype-establishment">Establishments</label>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Direcciones</title>
+  <link rel="stylesheet" href="../css/vendors/maprutas.css">
+</head>
 
-      <input type="radio" name="type" id="changetype-address">
-      <label for="changetype-address">Addresses</label>
-
-      <input type="radio" name="type" id="changetype-geocode">
-      <label for="changetype-geocode">Geocodes</label>
+<body>
+  <div id="map"></div>
+  <div id="right-panel">
+    <div>
+      <b>Seleccione Primera ruta</b>
+      <select id="start">
+        <option value="Museo de las Momias de Guanajuato">Museo de las Momias de Guanajuato</option>
+        <option value="Alhóndiga de Granaditas">Alhóndiga de Granaditas</option>
+        <option value="Museo iconográfico del Quijote">Museo iconográfico del Quijote</option>
+        <option value="Museo del Pueblo de Guanajuato">Museo del Pueblo de Guanajuato</option>
+        <option value="Museo Casa Diego">Museo Casa Diego </option>
+      </select>
+      <br>
+      <b>Destino:</b>
+      <br>
+      <!-- <i>(Ctrl+Click or Cmd+Click for multiple selection)</i> <br> -->
+      <select multiple id="waypoints">
+        <option value="Casa Museo Gene Byron">Casa Museo Gene Byron</option>
+        <option value="Casa de Tía Aura">Casa de Tía Aura</option>
+        <option value="Casa de las Leyendas de Guanajuato">Casa de las Leyendas de Guanajuato</option>
+        <option value="Casa de los lamentos">Casa de los lamentos</option>
+        <option value="Casa Museo José Alfredo Jiménez">Casa Museo José Alfredo Jiménez</option>
+      </select>
+      <br>
+      <b>Tercer sugerencia:</b>
+      <select id="end">
+        <option value="Parque Bicentenario De Silao">Parque Bicentenario De Silao</option>
+        <option value="Cañada de la Virgen">Cañada de la Virgen</option>
+        <option value="Zona Arqueológica de Peralta">Zona Arqueológica de Peralta</option>
+        <option value="Museo Casa El Purgatorio">Museo Casa El Purgatorio</option>
+        <option value="Museo de La Ciudad">Museo de La Ciudad</option>
+      </select>
+      <br>
+      <input type="submit" id="submit">
     </div>
-    <div id="map"></div>
+    <div id="directions-panel"></div>
+  </div>
+  <script src="../js/vendors/maprutas.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIdxjSv6ryGgndpGEofce3YfLSTJV-W7g&callback=initMap">
+  </script>
+</body>
 
-    
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIdxjSv6ryGgndpGEofce3YfLSTJV-W7g&libraries=places&callback=initMap"
-        async defer></script>
-
-    <script src="../js/app.js"></script>
-  </body>
 </html>
