@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+
+body {
+    /* font-family: 'Lato', sans-serif; */
+    background-image: url('../../assets/images/2-Guanajuato.jpg');
+}
+
+h1 {
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+}
+
+span, h3 {
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+span {
+    display: block;
+}
